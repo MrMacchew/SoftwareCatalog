@@ -1,0 +1,15 @@
+<% x = 0 %>
+<% @apps.each do |app| %>
+      <tr class='app' id='app-id-<%= x %>'>
+        <td><%= link_to image_tag(app.icon_url(:thumb).to_s), app %></td>
+	<td><h2><%= link_to app.name, app, class: "anchorStyle" %></h2>
+        <div class="my-overflow"><%= app.description %></div>
+        <span class='lead'>Platform(s): <%= app.platform %></span></td>
+        <td class='aTo'><%= app.availableTo %></td>
+        <td class='aThrough'><%= app.availableThrough %></td>
+	<td class='admin'><%= link_to 'Show', app %></td>
+        <td class='admin'><%= link_to 'Edit', edit_app_path(app) %></td>
+        <td class='admin'><%= link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% x += 1 %>
+<% end %>

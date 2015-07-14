@@ -1,0 +1,38 @@
+<div class='container'>
+  <p id="notice"><%= notice %></p>
+  <div class='row well'>
+    <div class='col-md-2'></div>
+      <div class='col-md-2'>
+	<p>
+	  <%= image_tag(@app.icon_url(:thumb).to_s, :class => 'vcenter') %>
+	</p>
+      </div>
+    <div class='col-md-6'>
+      <p>
+        <h1><%= @app.name %></h1>
+      </p>
+      <p>
+        <%= @app.description %>
+     </p>
+
+	<p>
+	  <h3>Platform: <%= @app.platform %></h3>
+	</p>
+
+	<p>
+	  <h4>Available to:</h4> <%= @app.availableTo %>
+	</p>
+
+	<p>
+	  <h4>Available through: </h4>
+          <%= @app.availableThrough %>
+	</p>
+	</div>
+      </div>
+</div>
+<div class="col-md-2"></div>
+<div class='row well col-md-12 text-center'>
+  <%= link_to 'Edit', edit_app_path(@app) %> | 
+  <%= link_to 'Back', apps_path %>
+  </div>
+</div>
