@@ -33,8 +33,6 @@ $(window).ready( function() {
   $(".pagination > li").first().addClass("active");
 });
 
-
-
 function pageSelect(page, increment)
 {
   $('.app').hide();

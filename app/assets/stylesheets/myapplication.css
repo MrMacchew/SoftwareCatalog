@@ -38,3 +38,9 @@ div.my-overflow {
 .anchorStyle:hover, .anchorStyle:focus {
     background: transparent;
 }
+
+.myadminbutton {
+    position: absolute;
+    right: 0px;
+    padding-bottom: 15px;
+}

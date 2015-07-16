@@ -1,7 +1,14 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
+<div class='row'>
+	<div class='myadminbutton'>
+		<button class="btn btn-default" data-toggle="modal" data-target="#adminmodal" title="Login">
+			<span class="glyphicon glyphicon-user"> Login </span>
+		</button>
+	</div>
+</div>
+<%= render 'adminlogin' %>
 <div class="jumbotron text-center"><h1>Weber State Software</h1></div>
-
 <table class='table table-hover table-striped'>
   <thead>
     <tr>
